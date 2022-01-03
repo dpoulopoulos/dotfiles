@@ -19,7 +19,7 @@
 [alias]
   author   = !"SEARCH=${@:-`git config user.email`}; set --; git log --format='%aN <%aE>' | uniq | grep -m 1 \"$SEARCH\""
   authors  = !"SEARCH=${@:-`git config user.email`}; set --; git log --format='%aN <%aE>' | grep \"$SEARCH\" | uniq | awk '!a[$0]++'"
-  reviewed = !"BRANCH=${1:-master}; shift; AUTHORS=\"~/Projects/scripts/git-reviewed.sh\"; for A in \"${@:-`git config user.email`}\"; do AUTHORS=$AUTHORS\" \\\"`git author $A`\\\"\"; done; set --; git rebase -i -x \"$AUTHORS\" $BRANCH"
+  reviewed = !"BRANCH=${1:-master}; shift; AUTHORS=\"~/projects/scripts/git-reviewed.sh\"; for A in \"${@:-`git config user.email`}\"; do AUTHORS=$AUTHORS\" \\\"`git author $A`\\\"\"; done; set --; git rebase -i -x \"$AUTHORS\" $BRANCH"
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
