@@ -33,7 +33,7 @@ au BufNewFile,BufRead *.py
    \ set autoindent |
    \ set fileformat=unix
  
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
  
 "set the split order
 set splitbelow
