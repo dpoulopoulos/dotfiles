@@ -21,5 +21,5 @@
   authors  = !"SEARCH=${@:-`git config user.email`}; set --; git log --format='%aN <%aE>' | grep \"$SEARCH\" | uniq | awk '!a[$0]++'"
   reviewed = !"BRANCH=${1:-master}; shift; AUTHORS=\"~/projects/scripts/git-reviewed.sh\"; for A in \"${@:-`git config user.email`}\"; do AUTHORS=$AUTHORS\" \\\"`git author $A`\\\"\"; done; set --; git rebase -i -x \"$AUTHORS\" $BRANCH"
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
