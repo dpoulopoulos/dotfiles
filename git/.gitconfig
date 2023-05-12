@@ -1,19 +1,9 @@
 [user]
   name = Dimitris Poulopoulos
-  email = dimpo@arrikto.com
+  email = dimitris.a.poulopoulos@gmail.com
   signingkey = BEB28EF547EC1C77422064A779171B0722FF7FE2
 [color]
   ui = auto
-[sendemail]
-  envelopesender = dimpo@arrikto.com
-  smtpEncryption = tls
-  smtpServer = smtp.gmail.com
-  smtpServerPort = 587
-  smtpuser = dimpo@arrikto.com
-  suppressfrom = true
-  suppresscc = all
-  chainreplyto = false
-  confirm = always
 [credential]
   helper = !echo password=$(pass show smtp.gmail.com) && :
 [alias]
