@@ -1,59 +1,39 @@
 format = """
-$username\
+$username\ 
 $hostname\
 $directory\
 $git_branch\
-$git_state\
-$git_status\
-$cmd_duration\
-$line_break\
 $python\
+$line_break\
 $character"""
-
+ 
 add_newline = false
-
+ 
 [username]
-format = '[$user]($style)'
+format = '[$user]($style) · '
 disabled = false
 show_always = true
-
+ 
 [hostname]
-ssh_only = false
+ssh_only = true
 format = '[$ssh_symbol]($style) on [$hostname]($style) · '
 disabled = false
-
+ 
 [directory]
-format = '[$path](blue bold) · '
-style = "blue"
-
-[character]
-success_symbol = "[𝄞](white)"
-error_symbol = "[𝄞](red)"
-vimcmd_symbol = "[𝄞](purple)"
-
-[git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
-
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+format = '[$path](cyan bold)'
 style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
-
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
-
+ 
+# [character]
+# success_symbol = "[𝄞](white)"
+# error_symbol = "[𝄞](red)"
+# vimcmd_symbol = "[𝄞](purple)"
+ 
+[git_branch]
+format = " · [$symbol]($style) [$branch]($style)"
+style = "green"
+symbol = ""
+ 
 [python]
-format = '[(\($version · $virtualenv\) )]($style)'
+format = ' · [$symbol]($style) [$version]($style) [$virtualenv]($style)'
 style = "bright-black"
+symbol = ""
