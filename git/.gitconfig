@@ -1,7 +1,7 @@
 [user]
   name = Dimitris Poulopoulos
   email = dimitris.a.poulopoulos@gmail.com
-  signingkey = BEB28EF547EC1C77422064A779171B0722FF7FE2
+  signingkey = 76E7CE1D63EE16C9
 [color]
   ui = auto
 [credential]
@@ -13,3 +13,5 @@
 [core]
   editor = nvim
   excludesfile = ~/.gitignore_global
+[commit]
+	gpgsign = true
