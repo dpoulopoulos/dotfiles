@@ -102,3 +102,16 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
+
+# cache gpg key passphrase
+eval "$(keychain --quiet --nogui --eval --agents gpg FF29AC3DF00A31CAD3704A1C76E7CE1D63EE16C9)"
+
+# cache ssh key passphrase
+eval "$(keychain --quiet --nogui --eval --agents ssh $HOME/.ssh/id_rsa)"
+
+# set Go and Go binaries in PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
+
+# enable `kubectl` completion
+source <(kubectl completion bash)
