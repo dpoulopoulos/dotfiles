@@ -20,9 +20,6 @@ M.navigation = {
     ["<A-;>"] = { "<C-w>l", "window right" },
     ["<A-k>"] = { "<C-w>j", "window down" },
     ["<A-l>"] = { "<C-w>k", "window up" },
-
-    ["<leader>db"] = { "<cmd> DapContinue <CR>", "start the debugger" },
-    ["<leader>br"] = { "<cmd> DapToggleBreakpoint <CR>", "toggle breakpoint" }
   },
   i = {
     ["<A-j>"] = { "<Left>", "move left" },
@@ -43,5 +40,15 @@ M.navigation = {
     ["l"] = { "k", "Move up" },
   },
 }
+
+M.mason = {
+  plugin = true,
+  n ={
+    ["<leader>dd"] = { "<cmd> DapContinue <CR>", "start the debugger" },
+    ["<leader>pp"] = { "<cmd> DapToggleBreakpoint <CR>", "toggle breakpoint" }
+  }
+}
+
+require("core.utils").load_mappings("mason")
 
 return M
