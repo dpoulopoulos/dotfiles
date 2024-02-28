@@ -1,0 +1,11 @@
+[user]
+  name = Dimitris Poulopoulos
+  email = dimitris.a.poulopoulos@gmail.com
+  signingkey = 76E7CE1D63EE16C9
+[color]
+  ui = auto
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main

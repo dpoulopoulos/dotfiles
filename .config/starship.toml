@@ -1,0 +1,39 @@
+format = """
+$username\ 
+$hostname\
+$directory\
+$git_branch\
+$python\
+$line_break\
+$character"""
+ 
+add_newline = true
+ 
+[username]
+format = '[$user]($style) · '
+disabled = false
+show_always = true
+ 
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol]($style) on [$hostname]($style) · '
+disabled = false
+ 
+[directory]
+format = '[$path](cyan bold)'
+style = "cyan"
+ 
+# [character]
+# success_symbol = "[𝄞](white)"
+# error_symbol = "[𝄞](red)"
+# vimcmd_symbol = "[𝄞](purple)"
+ 
+[git_branch]
+format = " · [$symbol]($style) [$branch]($style)"
+style = "green"
+symbol = ""
+ 
+[python]
+format = ' · [$symbol]($style) [$version]($style) [$virtualenv]($style)'
+style = "bright-black"
+symbol = ""
