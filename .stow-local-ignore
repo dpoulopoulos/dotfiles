@@ -6,5 +6,6 @@
 \.gitignore
 
 # Everything else
+.github
 docs
 requirements.txt
