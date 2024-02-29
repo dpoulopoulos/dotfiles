@@ -31,4 +31,5 @@ We warmly welcome your feedback and look forward to hearing from you!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
+
+   stow
