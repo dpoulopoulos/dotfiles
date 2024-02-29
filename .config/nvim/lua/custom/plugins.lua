@@ -1,5 +1,9 @@
 local plugins = {
   {"github/copilot.vim"},
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
   {"preservim/tagbar"},
   {
     "rcarriga/nvim-dap-ui",
