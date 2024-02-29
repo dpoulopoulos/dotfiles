@@ -11,3 +11,5 @@
 	defaultBranch = main
 [alias]
 	stall = stash --all
+[includeIf "gitdir:~/git/hpe/"]
+  path = ~/git/hpe/.gitconfig
