@@ -32,6 +32,7 @@ We warmly welcome your feedback and look forward to hearing from you!
    :maxdepth: 1
    :caption: Contents:
 
+   dotfiles
    stow
    starship
    neovim
