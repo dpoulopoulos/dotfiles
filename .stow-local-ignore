@@ -4,3 +4,7 @@
 # Ignore Git related files
 \.git
 \.gitignore
+
+# Everything else
+docs
+requirements.txt
