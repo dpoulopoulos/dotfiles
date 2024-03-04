@@ -3,6 +3,7 @@ $username\
 $hostname\
 $directory\
 $git_branch\
+${custom.git_rebase_dot}\
 $git_status\
 $git_state\
 $python\
@@ -14,36 +15,47 @@ add_newline = true
 command_timeout= 10000
  
 [username]
-format = "[$user]($style)  ·  "
+format = "[$user]($style)"
 disabled = false
 show_always = true
 
 [hostname]
-ssh_only = true
-format = "[$ssh_symbol]($style) on [$hostname]($style)  ·  "
+ssh_only = false
+format = "[@$hostname]($style)  · "
 disabled = false
+style = "bold yellow"
  
 [directory]
-format = "[$path]($style) [$read_only]($read_only_style) ·  " 
+format = "[$read_only]($read_only_style) [$path]($style)"
 style = "cyan bold"
+read_only = " 🔒"
  
 [git_branch]
-format = "[$symbol]($style) [$branch]($style)"
+format = "  ·  [$symbol]($style) [$branch]($style)"
 style = "green"
 symbol = ""
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[$all_status$ahead_behind\]]($style)) '
 ahead = '⇡${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 style = "green"
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style)'
+format = '[\($state ($progress_current of $progress_total)\)]($style) '
 style = "green"
  
 [python]
 format = ' ·  [$symbol]($style) [$version]($style) ([\[$virtualenv\]]($style))'
 style = "bright-black"
 symbol = ""
+
+[custom.git_rebase_dot]
+command = """
+if [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; then
+  echo -e '\\e[37m  · \\e[0m';
+fi
+"""
+description = "Shows a dot during git rebase"
+when = "git rev-parse --is-inside-work-tree 2> /dev/null"
