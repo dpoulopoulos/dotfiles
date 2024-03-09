@@ -9,7 +9,6 @@ $git_state\
 $fill\
 $jobs\
 $python\
-$time\
 $line_break\
 $character"""
  
@@ -58,13 +57,9 @@ format = '[$symbol$number]($style)  ·  '
 symbol = ''
 
 [python]
-format = '[$symbol]($style) [$version]($style)([ \[$virtualenv\]]($style))  ·  '
+format = '[$symbol]($style) [$version]($style)([ \[$virtualenv\]]($style))'
 style = "bright-black"
 symbol = ""
-
-[time]
-format = '[$time]($style) '
-disabled = false
 
 [custom.git_rebase_dot]
 command = """
