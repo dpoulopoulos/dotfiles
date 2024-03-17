@@ -1,5 +1,6 @@
 ^/README.*
 ^/LICENSE
+^/Makefile
 
 # Ignore Git related files
 \.git
