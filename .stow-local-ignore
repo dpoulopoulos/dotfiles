@@ -8,5 +8,6 @@
 
 # Everything else
 .github
+misc
 docs
 requirements.txt

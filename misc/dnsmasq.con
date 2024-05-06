@@ -1,0 +1,35 @@
+# Set dnsmasq to be a DHCP and DNS server for the local network
+
+# DHCP: Enable (for specific addresses)
+dhcp-range=192.168.20.150,192.168.20.200,12h
+dhcp-option=option:netmask,255.255.255.0
+dhcp-option=option:router,192.168.20.1
+dhcp-option=option:dns-server,192.168.20.51
+log-dhcp
+
+# the maximum number of concurrent DNS queries
+dns-forward-max=5096
+# extend short TTL values to the time given when caching them
+min-cache-ttl=300
+# do not detect and block dns-rebind on queries to these domains
+rebind-domain-ok=
+
+# do not forward reverse lookup queries for local network
+bogus-priv
+
+# add domain part to simple name lookup
+expand-hosts
+
+# authoritatively answer queries for local domain
+local=/rig.dimpo/
+
+# never forward requests for plain names
+domain-needed
+
+#  do not use resolv.conf
+no-resolv
+no-poll
+server=8.8.8.8
+server=8.8.4.4
+
+domain=rig.dimpo
