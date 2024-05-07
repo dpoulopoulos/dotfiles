@@ -117,3 +117,6 @@ export PATH=$PATH:$HOME/go/bin
 
 # enable `kubectl` completion
 source <(kubectl completion bash)
+
+# enable keychain for managing the SSH agent
+eval $(keychain --eval)
