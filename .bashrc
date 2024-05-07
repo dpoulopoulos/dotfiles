@@ -120,3 +120,6 @@ source <(kubectl completion bash)
 
 # enable keychain for managing the SSH agent
 eval $(keychain --eval)
+
+# set default URI for QEMU
+export LIBVIRT_DEFAULT_URI='qemu:///system'
