@@ -15,3 +15,5 @@
   path = ~/git/hpe/.gitconfig
 [rebase]
 	updateRefs = true
+[diff "ansible-vault"]
+	textconv = ansible-vault view
