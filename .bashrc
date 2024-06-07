@@ -119,7 +119,7 @@ export PATH=$PATH:$HOME/go/bin
 source <(kubectl completion bash)
 
 # enable keychain for managing the SSH agent
-eval $(keychain --eval)
+eval $(keychain --inherit any-once --eval id_rsa)
 
 # set default URI for QEMU
 export LIBVIRT_DEFAULT_URI='qemu:///system'
