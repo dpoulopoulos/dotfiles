@@ -102,6 +102,8 @@ fi
 
 export EDITOR=vim
 
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 # enable starship shell
 eval "$(starship init bash)"
 
