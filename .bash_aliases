@@ -22,3 +22,6 @@ alias cbpaste='xsel --output --clipboard'
 
 # use bat instead of cat
 alias cat='batcat'
+
+# thefuck alias
+eval $(thefuck --alias)
