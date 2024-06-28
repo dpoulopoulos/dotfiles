@@ -19,3 +19,6 @@ eval "$(gh copilot alias -- bash)"
 
 alias cbcopy='xsel --input --clipboard'
 alias cbpaste='xsel --output --clipboard'
+
+# use bat instead of cat
+alias cat='batcat'
