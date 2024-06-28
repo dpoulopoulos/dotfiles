@@ -125,3 +125,24 @@ eval $(keychain --inherit any-once --eval id_rsa)
 
 # set default URI for QEMU
 export LIBVIRT_DEFAULT_URI='qemu:///system'
+
+# set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# enable fzf for Git
+source ~/git/fzf-git.sh/fzf-git.sh
+
+# enable file preview when searching a file with fzf
+export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
+
+# enable file preview when searching a file with fzf using the `**` format
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    export|unset) fzf --preview "eval 'echo $'{}" "$@" ;;
+    ssh)          fzf --preview 'dig {}' "$@";;
+    *)            fzf --preview "batcat -n --color=always --line-range :500 {}" "$@" ;;
+  esac
+}
