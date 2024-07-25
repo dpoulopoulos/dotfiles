@@ -1,25 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
  
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
- 
-"a tree explorer plugin for vim
-Plugin 'preservim/nerdtree'
- 
-" pythin indentation
-Plugin 'vim-scripts/indentpython.vim'
- 
-"python code folding
-Plugin 'tmhedberg/SimpylFold'
- 
-call vundle#end()
- 
-filetype plugin indent on    " required
- 
-let g:SimpylFold_docstring_preview=1
- 
 set encoding=utf-8
 
 set colorcolumn=80
