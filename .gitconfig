@@ -1,13 +1,11 @@
 [user]
   name = Dimitris Poulopoulos
   email = dimitris.a.poulopoulos@gmail.com
-  signingkey = 76E7CE1D63EE16C9
 [core]
   pager = delta
   editor = nvim
-  excludesfile = ~/.gitignore_global
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [color]
   ui = auto
 [interactive]
@@ -18,14 +16,14 @@
 [merge]
   confictstyle = diff3
 [alias]
-	stall = stash --all
-[includeIf "gitdir:~/git/hpe/"]
-  path = ~/git/hpe/.gitconfig
+  stall = stash --all
+[includeIf "gitdir:~/git/mozilla/"]
+  path = ~/git/mozilla/.gitconfig
 [rebase]
-	updateRefs = true
+  updateRefs = true
 [diff]
   colorMoved = default
 [diff "ansible-vault"]
-	textconv = ansible-vault view
+  textconv = ansible-vault view
 [status]
-	submoduleSummary = true
+  submoduleSummary = true
