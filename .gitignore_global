@@ -1,1 +1,5 @@
+# VS Code related config files
 .vscode
+
+# Build directories
+**/build/*
