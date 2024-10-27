@@ -37,5 +37,6 @@ We warmly welcome your feedback and look forward to hearing from you!
    starship
    uv
    neovim
+   copilot
    tmux
    kubectl
