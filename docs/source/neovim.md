@@ -15,7 +15,8 @@ To install and configure Neovim you need the following packages:
 user:~$ sudo apt install curl nodejs npm exuberant-ctags build-essential python3.11-venv zip
 ```
 
-> This guide has been tested on a Debian 12 (Bookworm) machine.
+> This guide has been tested on a Debian 12 (Bookworm), Ubuntu 22.04 (Jammy Jellyfish), and macOS
+> Sequoia machines.
 
 ## Install Neovim
 
@@ -34,76 +35,37 @@ To install Neovim follow the procedure below:
     root:~# cd /opt
     ```
 
-1. Download the Appimage:
+1. Download the [latest release](https://github.com/neovim/neovim/releases/). For example, we're
+   using the `0.10.2` release here:
 
     ```console
-    root:/opt# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    root:/opt# wget https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
     ```
 
-1. Make it executable:
+1. Untar the package you downloaded:
 
     ```console
-    root:/opt# chmod 754 nvim.appimage
+    root:/opt# tar xzf nvim-linux64.tar.gz && rm nvim-linux64.tar.gz
     ```
 
-1. Extract the Appimage:
+1. Press `ctrl + D` to return to your user.
+
+1. Add `nvim` binary to PATH:
 
     ```console
-    root:/opt# ./nvim.appimage --appimage-extract
-    ```
-
-1. Delete the Appimage file:
-
-    ```console
-    root:/opt# rm nvim.appimage
-    ```
-
-1. Rename the image folder to `nvim`:
-
-    ```console
-    root:/opt# mv squashfs-root/ nvim
-    ```
-
-1. Change owner and group:
-
-    ```console
-    root:/opt# chown -R user:user nvim
-    ```
-
-1. Navigate to `/usr/local/bin`:
-
-    ```console
-    root:/opt# cd /usr/local/bin
-    ```
-
-1. Create a symlink:
-
-    ```console
-    root:/usr/local/bin# ln -s /opt/nvim/AppRun nvim
+    user:~$ echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
     ```
 
 ## Configure Neovim with NvChad
 
 We are using [NvChad](https://nvchad.com/) to enhance our Neovim installation. NvChad offers a
 blazing fast Neovim config providing solid defaults and a beautiful UI. To install it run the
-commands below. Choose `no` when it asks you to create an example custom configuration:
+command below:
 
-1. Change back to your user:
+```console
+user:~$ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+```
 
-    ```console
-    root:/usr/local/bin# exit
-    user:~$
-    ```
-
-1. Install NvChad and run Neovim:
-
-    ```console
-    user:~$ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-    ```
-
-1. (optional) Remove the default `chadrc.lua` file if you want to use the custom NvChad
-   configuration provided in this dotfiles repo:
-
-    ```console
-    user:~$ rm .config/nvim/lua/custom/chadrc.lua
-    ```
+> This repository offers a ready Neovim configuration in `.config/nvim`. If you want to use it
+> first run `git submodule update --init --recursive` to fetch the `nvim` submodule and then
+> move or stow this directory in `~/.config`.
