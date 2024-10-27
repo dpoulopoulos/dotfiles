@@ -116,6 +116,9 @@ eval "$(pyenv virtualenv-init -)"
 # set Go and Go binaries in PATH
 export PATH=$PATH:/usr/local/go/bin
 
+# set protoc in PATH
+export PATH="$PATH:$HOME/.local/bin"
+
 # enable `kubectl` completion
 source <(kubectl completion bash)
 
