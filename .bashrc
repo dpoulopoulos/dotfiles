@@ -107,11 +107,8 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # enable starship shell
 eval "$(starship init bash)"
 
-# enable pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+# enable uv
+. "$HOME/.cargo/env"
 
 # set Go and Go binaries in PATH
 export PATH=$PATH:/usr/local/go/bin

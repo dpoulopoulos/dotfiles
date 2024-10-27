@@ -35,6 +35,7 @@ We warmly welcome your feedback and look forward to hearing from you!
    dotfiles
    stow
    starship
+   uv
    neovim
    tmux
    kubectl
