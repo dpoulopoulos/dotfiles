@@ -14,19 +14,19 @@ Overview
 --------
 
 Dotfiles are used to customize your system's environment. This repository serves as a central hub
-to store, manage, and share my configurations for applications such as the shell (bash), editors
-(Vim/Neovim), and many others. Whether you're looking to adopt some of my configurations or just
-curious about different ways to optimize your development environment, feel free to explore and
+to store, manage, and share my configurations for applications such as the shell (bash, zsh),
+editors (Vim/Neovim), and many others. Whether you're looking to adopt some of my configurations or
+just curious about different ways to optimize your development environment, feel free to explore and
 borrow whatever you find useful.
 
-🚧 🚧 🚧 This is Work-in-Progress. 🚧 🚧 🚧
+🚧 🚧 🚧 This will always be a work in progress. 🚧 🚧 🚧
 
 Contact
 -------
 
 * Dimitris Poulopoulos dimitris.a.poulopoulos@gmail.com
 
-We warmly welcome your feedback and look forward to hearing from you!
+I warmly welcome your feedback and look forward to hearing from you!
 
 .. toctree::
    :maxdepth: 1

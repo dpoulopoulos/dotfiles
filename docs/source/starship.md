@@ -56,7 +56,7 @@ user:/tmp$ curl -sS https://starship.rs/install.sh | sh
 To activate it you should add the following line in your `.bashrc` file:
 
 ```console
-eval "$(starship init bash)"
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
 ```
 
 However, the dotfiles in this repository automate this step for you.

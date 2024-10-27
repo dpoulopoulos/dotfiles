@@ -1,7 +1,7 @@
 # Dotfiles
 
 Dotfiles are used to customize your system’s environment. This repository serves as a central hub to
-store, manage, and share my configurations for applications such as the shell (bash), editors
+store, manage, and share my configurations for applications such as the shell (bash, zsh), editors
 (Vim/Neovim), and many others.
 
 Utilizing the dotfiles from this repository necessitates the installation of certain packages.
