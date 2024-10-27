@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Kubeflow on KVM'
+project = 'Dotfiles'
 copyright = '2024, Dimitris Poulopoulos'
 author = 'Dimitris Poulopoulos'
-release = '0.0.1'
+release = '0.0.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
