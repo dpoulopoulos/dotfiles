@@ -36,6 +36,7 @@ I warmly welcome your feedback and look forward to hearing from you!
    stow
    starship
    uv
+   go
    neovim
    copilot
    tmux
