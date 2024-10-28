@@ -1,4 +1,7 @@
-# GitHub Copilot in the CLI
+# <i class="fa-brands fa-github"></i> Copilot in the CLI
+
+Next, let's get a little help using AI. For this, we will install the [GitHub CLI](https://cli.github.com/)
+(`gh`) and the Copilot in the CLI extension.
 
 Copilot in the CLI allows users to access the power of GitHub Copilot to get command suggestions and
 explanations without leaving the terminal.
@@ -30,6 +33,8 @@ To install the GitHub CLI (gh) follow the steps below:
     ```console
     user:~$ gh auth login
     ```
+
+    Follow the instructions to authenticate with GitHub.
 
 ## Install Copilot in the CLI
 

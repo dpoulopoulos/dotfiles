@@ -1,4 +1,9 @@
-# Starship Shell
+# <i class="fa-solid fa-terminal"></i> Starship Shell
+
+The next step of the terminal customization journey is to install a custom shell prompt. The default
+shell prompt is quite boring and does not provide much information. A custom shell prompt can
+provide you with a lot of useful information, such as the current directory, the git branch you are
+on, the exit code of the last command, and much more.
 
 [Starship](https://starship.rs/) is a minimal, blazing fast, and infinitely customizable prompt for
 any shell. Starship brings the best-in-class speed and safety of Rust, to make your prompt as quick
@@ -59,7 +64,9 @@ To activate it you should add the following line in your `.bashrc` file:
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 ```
 
-However, the dotfiles in this repository automate this step for you.
+```{note}
+The dotfiles in this repository automate this step for you, so you can skip this it.
+```
 
 ## Configure Starhsip Shell
 
@@ -72,3 +79,8 @@ user:/tmp$ mkdir -p ~/.config && touch ~/.config/starship.toml
 
 Then, you can follow the Starship Shell [docs](https://starship.rs/config/#prompt) to configure your
 prompt. This repository offers a `starship.toml` file that can serve as a starting point.
+
+```{note}
+The dotfiles in this repository automate this step for you, so you can skip this it. You can view
+the `starship.toml` file [here](https://github.com/dpoulopoulos/dotfiles/blob/main/.config/starship.toml).
+```

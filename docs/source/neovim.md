@@ -1,6 +1,9 @@
-# Neovim
+# <i class="fa-solid fa-pencil"></i> Neovim
 
-[Neovim](https://neovim.io/) is a Vim-based text editor, focusing on usability and extensibility.
+Now that we have our dotfiles in place, let's install a text editor in case we need to edit some
+files. The text editor we are going to install and configure is [Neovim](https://neovim.io/).
+
+Neovim is a Vim-based text editor, focusing on usability and extensibility.
 It enhances [Vim](https://www.vim.org/) by adding asynchronous processing, a powerful plugin
 architecture, and a robust API for better integration with modern development tools. Developed with
 community input, Neovim aims to modernize Vim's user experience without sacrificing its core
@@ -15,8 +18,10 @@ To install and configure Neovim you need the following packages:
 user:~$ sudo apt install curl nodejs npm exuberant-ctags build-essential python3.11-venv zip
 ```
 
-> This guide has been tested on a Debian 12 (Bookworm), Ubuntu 22.04 (Jammy Jellyfish), and macOS
-> Sequoia machines.
+```{note}
+This guide has been tested on a Debian 12 (Bookworm), Ubuntu 22.04 (Jammy Jellyfish), and macOS
+Sequoia machines.
+```
 
 ## Install Neovim
 
@@ -50,10 +55,19 @@ To install Neovim follow the procedure below:
 
 1. Press `ctrl + D` to return to your user.
 
+    ```console
+    user:~$
+    ```
+
 1. Add `nvim` binary to PATH:
 
     ```console
     user:~$ echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
+    ```
+
+    ```{note}
+    This repository's `.bashrc` file already has the `nvim` binary path added to the `PATH`
+    variable, so you can skip this step.
     ```
 
 ## Configure Neovim with NvChad
@@ -66,6 +80,9 @@ command below:
 user:~$ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 ```
 
-> This repository offers a ready Neovim configuration in `.config/nvim`. If you want to use it
-> first run `git submodule update --init --recursive` to fetch the `nvim` submodule and then
-> move or stow this directory in `~/.config`.
+```{note}
+This repository offers a ready Neovim configuration in `.config/nvim`, so you can skip this step.
+The files in `.config/nvim` configure Neovim as a Python IDE with LSP support, and also provide a
+several other tools. For more information, check the [nvim configuration](https://github.com/dpoulopoulos/nvim)
+repository.
+```

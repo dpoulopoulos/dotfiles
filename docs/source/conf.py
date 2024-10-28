@@ -30,3 +30,7 @@ copybutton_exclude = ".linenos, .gp, .go"
 
 html_theme = "sphinx_rtd_theme"
 # html_static_path = ['_static']
+
+html_js_files = [
+    'https://kit.fontawesome.com/a5cfa99c7d.js',
+]

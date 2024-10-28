@@ -1,4 +1,4 @@
-# GNU Stow
+# <i class="fa-solid fa-arrow-right"></i> GNU Stow
 
 [GNU Stow](https://www.gnu.org/software/stow/) is a symlink farm manager which takes distinct
 packages of software and/or data located in separate directories on the filesystem, and makes them
@@ -7,15 +7,15 @@ component that makes everything work.
 
 ## Install
 
-To install `stow` on a Debian-based system run the following command:
+To install Stow on a Debian-based system run the following command:
 
 ```console
-root:~# apt install stow
+root:~$ sudo apt install stow
 ```
 
 ## Usage
 
-You can use `stow` to create a symlink of a file to a target directory like this:
+You can use Stow to create a symlink of a file to a target directory like this:
 
 ```console
 user:~$ stow -t ~ file
@@ -24,15 +24,15 @@ user:~$ stow -t ~ file
 The `-t` flag specifies the target directory (in this case the home directory) and `file` specifies
 the file you want to mirror via a symlink.
 
-Finally, you can `stow` all the files in a directory, like the ones in this repository, by simply
+Finally, you can stow all the files in a directory, like the ones in this repository, by simply
 running:
 
 ```console
 user:~$ stow .
 ```
 
-This command will establish symbolic links for all files in the current directory
-within the parent directory, maintaining the original directory's structure.
+This command will establish symbolic links for all files in the current directory within the parent
+directory, maintaining the original directory's structure.
 
 ## Ignore Files and Directories
 

@@ -1,4 +1,4 @@
-# Go
+# <i class="fa-brands fa-golang fa-lg"></i> Golang
 
 Go, also known as Golang, is an open-source programming language developed by Google. It is designed
 for simplicity, efficiency, and reliability, making it ideal for building scalable and
@@ -33,7 +33,9 @@ To install Go on your system, follow the instructions below:
     user:~$ . ~/.bashrc
     ```
 
-    > The `.bashrc` file in this repository automates this step for you.
+    ```{note}
+    The `.bashrc` file in this repository automates this step for you, so you can skip it.
+    ```
 
 ## Verify
 
