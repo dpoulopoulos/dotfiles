@@ -18,4 +18,4 @@ borrow whatever you find useful.
 > want or need. Don’t blindly use my settings unless you know what that entails. Use at your own
 > risk!
 
-To install the dotfiles in this repository follow the steps in the [documentation](https://dimpo.me/dotfiles).
+To install the dotfiles in this repository follow the steps in the [documentation](https://dpoulopoulos.github.io/dotfiles/).
