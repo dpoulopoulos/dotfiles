@@ -19,8 +19,8 @@ alias nv='nvim'
 # GitHub Copilot CLI aliases
 eval "$(gh copilot alias -- bash)"
 
-alias cbcopy='xsel --input --clipboard'
-alias cbpaste='xsel --output --clipboard'
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
 
 alias bcat='batcat'
 
