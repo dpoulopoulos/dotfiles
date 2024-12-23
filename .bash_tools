@@ -1,0 +1,33 @@
+# Enable Starship shell
+eval "$(starship init bash)"
+
+# Enable Keychain for managing the SSH agent
+eval $(keychain --inherit any-once --eval id_rsa)
+
+# Source Cargo environment
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
+
+# Load NVM (Node Version Manager)
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash
+
+# Enable fzf for Git
+if [ -f ~/git/fzf-git.sh/fzf-git.sh ]; then
+    . ~/git/fzf-git.sh/fzf-git.sh
+fi
+
+# Customize fzf completion for certain commands
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    export|unset) fzf --preview "eval 'echo $'{}" "$@" ;;
+    ssh)          fzf --preview 'dig {}' "$@";;
+    *)            fzf --preview "batcat -n --color=always --line-range :500 {}" "$@" ;;
+  esac
+}

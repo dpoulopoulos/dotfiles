@@ -81,74 +81,21 @@ esac
 # put all your aliases into a separate file named
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
 # Same for the environment vatiables
-
 if [ -f ~/.env ]; then
     . ~/.env
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+# Same for the tools
+if [ -f ~/.bash_tools ]; then
+    . ~/.bash_tools
 fi
 
-export EDITOR=vim
-
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
-# enable starship shell
-eval "$(starship init bash)"
-
-# enable uv
-. "$HOME/.cargo/env"
-
-# set Go and Go binaries in PATH
-export PATH=$PATH:/usr/local/go/bin
-
-# set protoc in PATH
-export PATH="$PATH:$HOME/.local/bin"
-
-# enable `kubectl` completion
-source <(kubectl completion bash)
-
-# enable keychain for managing the SSH agent
-eval $(keychain --inherit any-once --eval id_rsa)
-
-# set default URI for QEMU
-export LIBVIRT_DEFAULT_URI='qemu:///system'
-
-# set up fzf key bindings and fuzzy completion
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# enable fzf for Git
-source ~/git/fzf-git.sh/fzf-git.sh
-
-# enable file preview when searching a file with fzf
-export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
-
-# enable file preview when searching a file with fzf using the `**` format
-_fzf_comprun() {
-  local command=$1
-  shift
-
-  case "$command" in
-    export|unset) fzf --preview "eval 'echo $'{}" "$@" ;;
-    ssh)          fzf --preview 'dig {}' "$@";;
-    *)            fzf --preview "batcat -n --color=always --line-range :500 {}" "$@" ;;
-  esac
-}
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Same for completions
+if [ -f ~/.bash_completions ]; then
+    . ~/.bash_completions
+fi
