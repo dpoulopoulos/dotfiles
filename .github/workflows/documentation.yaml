@@ -10,13 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
       - name: Check links
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
           # Documentation: https://github.com/lycheeverse/lychee?tab=readme-ov-file#commandline-parameters
           lycheeVersion: v0.18.0
-          args: --base . --verbose --no-progress './**/*.md'  './**/*.rst' --exclude 'mailto:|localhost'
+          args: --base . --verbose --no-progress --cache --max-cache-age 1d './**/*.md'  './**/*.rst' --exclude 'mailto:|localhost'
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
