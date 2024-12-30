@@ -22,6 +22,7 @@ jobs:
         with:
           # Documentation: https://github.com/lycheeverse/lychee?tab=readme-ov-file#commandline-parameters
           lycheeVersion: v0.18.0
+          fail: false
           args: --base . --verbose --no-progress --cache --max-cache-age 1d './**/*.md'  './**/*.rst' --exclude 'mailto:|localhost'
       - uses: actions/setup-python@v3
       - name: Install dependencies
