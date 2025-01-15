@@ -8,7 +8,9 @@ if ! shopt -oq posix; then
 fi
 
 # Enable `kubectl` completion
-source <(kubectl completion bash)
+if command -v kubectl &> /dev/null; then
+  source <(kubectl completion bash)
+fi
 
 # Load NVM bash completion (if available)
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
