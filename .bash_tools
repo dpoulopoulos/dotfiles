@@ -3,6 +3,8 @@ eval "$(starship init bash)"
 
 # Enable Keychain for managing the SSH agent
 eval $(keychain --inherit any-once --eval id_rsa)
+# Initialize keychain and gpg-agent
+eval $(keychain --eval --agents gpg 76E7CE1D63EE16C9)
 
 # Source Cargo environment
 if [ -f "$HOME/.cargo/env" ]; then
