@@ -1,6 +1,7 @@
 [user]
   name = Dimitris Poulopoulos
   email = dimitris.a.poulopoulos@gmail.com
+  signingkey = 76E7CE1D63EE16C9
 [core]
   pager = delta
   editor = nvim
@@ -27,3 +28,5 @@
   textconv = ansible-vault view
 [status]
   submoduleSummary = true
+[commit]
+  gpgsign = true
