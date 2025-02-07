@@ -1,0 +1,14 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+
+# Enable uv
+. "$HOME/.cargo/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+# Enable keychain for managing the SSH agent
+eval $(keychain --inherit any-once --eval id_ed25519)
+
+# Enable keychain for managing the GPG agent
+eval $(keychain --eval --agents gpg 76E7CE1D63EE16C9)
+

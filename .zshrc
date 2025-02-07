@@ -2,14 +2,15 @@
 autoload -Uz compinit
 compinit
 
-alias nv="nvim"
-
+# Add node, npm, npx to PATH
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(starship init zsh)"
+# Enable kubectl conpletions
+source <(kubectl completion zsh)
 
-# Enable uv
-. "$HOME/.cargo/env"
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+# Source external aliases
+[ -f "$HOME/.zshrc_aliases" ] && source "$HOME/.zshrc_aliases"
+
+# Source external tools
+[ -f "$HOME/.zshrc_tools" ] && source "$HOME/.zshrc_tools"
+
