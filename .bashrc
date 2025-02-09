@@ -2,9 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Enable vi bindings
-set -o vi
-
 # if not running interactively, don't do anything
 case $- in
     *i*) ;;
