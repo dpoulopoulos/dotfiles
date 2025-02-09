@@ -6,23 +6,19 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Dotfiles'
-copyright = '2024, Dimitris Poulopoulos'
-author = 'Dimitris Poulopoulos'
-release = '0.0.2'
+project = "Dotfiles"
+copyright = "2024, Dimitris Poulopoulos"
+author = "Dimitris Poulopoulos"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    "sphinx.ext.githubpages",
-    "myst_parser",
-    "sphinx_copybutton"
-]
+extensions = ["sphinx.ext.githubpages", "myst_parser", "sphinx_copybutton"]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 source_suffix = [".rst", ".md"]
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 copybutton_exclude = ".linenos, .gp, .go"
 
 # -- Options for HTML output -------------------------------------------------
@@ -32,5 +28,5 @@ html_theme = "sphinx_rtd_theme"
 # html_static_path = ['_static']
 
 html_js_files = [
-    'https://kit.fontawesome.com/a5cfa99c7d.js',
+    "https://kit.fontawesome.com/a5cfa99c7d.js",
 ]
