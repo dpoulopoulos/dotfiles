@@ -26,3 +26,6 @@ alias bcat='batcat'
 
 # thefuck alias
 eval $(thefuck --alias)
+
+# navigate to my second brain on WSL
+alias bbw='cd ~/vault/zettelkasten'
