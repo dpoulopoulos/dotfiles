@@ -8,6 +8,9 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 # Add Go binaries to PATH
 export PATH="$(go env GOPATH)/bin:$PATH"
 
+# Set ANTHROPIC_API_KEY env var for Neovim
+export ANTHROPIC_API_KEY=$(pass show anthropic/apikey)
+
 # Enable kubectl conpletions
 source <(kubectl completion zsh)
 
