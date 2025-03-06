@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neovim &mdash; Dotfiles 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=6dbb43f8"></script>
+      <script src="https://kit.fontawesome.com/a5cfa99c7d.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Starship Shell" href="starship.html" />
+    <link rel="prev" title="GNU Stow" href="stow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dotfiles
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dotfiles.html"><i class="fa-solid fa-gear fa-spin"></i> Dotfiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stow.html"><i class="fa-solid fa-arrow-right"></i> GNU Stow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><i class="fa-solid fa-pencil"></i> Neovim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">Install Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-neovim">Install Neovim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-neovim-with-nvchad">Configure Neovim with NvChad</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="starship.html"><i class="fa-solid fa-terminal"></i> Starship Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uv.html"><i class="fa-brands fa-python"></i> uv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="go.html"><i class="fa-brands fa-golang fa-lg"></i> Golang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copilot.html"><i class="fa-brands fa-github"></i> Copilot in the CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html"><i class="fa-solid fa-window-maximize"></i> tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kubectl.html"><i class="fa-solid fa-dharmachakra"></i> kubectl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dotfiles</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><i class="fa-solid fa-pencil"></i> Neovim</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/neovim.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="neovim">
+<h1><i class="fa-solid fa-pencil"></i> Neovim<a class="headerlink" href="#neovim" title="Link to this heading"></a></h1>
+<p>Now that we have our dotfiles in place, let’s install a text editor in case we need to edit some
+files. The text editor we are going to install and configure is <a class="reference external" href="https://neovim.io/">Neovim</a>.</p>
+<p>Neovim is a Vim-based text editor, focusing on usability and extensibility.
+It enhances <a class="reference external" href="https://www.vim.org/">Vim</a> by adding asynchronous processing, a powerful plugin
+architecture, and a robust API for better integration with modern development tools. Developed with
+community input, Neovim aims to modernize Vim’s user experience without sacrificing its core
+efficiency and flexibility, making it a favored choice for developers seeking a versatile text
+editor.</p>
+<section id="install-dependencies">
+<h2>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h2>
+<p>To install and configure Neovim you need the following packages:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>nodejs<span class="w"> </span>npm<span class="w"> </span>exuberant-ctags<span class="w"> </span>build-essential<span class="w"> </span>python3.11-venv<span class="w"> </span>zip
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This guide has been tested on a Debian 12 (Bookworm), Ubuntu 22.04 (Jammy Jellyfish), and macOS
+Sequoia machines.</p>
+</div>
+</section>
+<section id="install-neovim">
+<h2>Install Neovim<a class="headerlink" href="#install-neovim" title="Link to this heading"></a></h2>
+<p>To install Neovim follow the procedure below:</p>
+<ol class="arabic">
+<li><p>Change to root user:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span>sudo<span class="w"> </span>su<span class="w"> </span>-
+<span class="gp">root:~#</span>
+</pre></div>
+</div>
+</li>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">/opt</span></code>. This is the location were we will install the Neovim Appimage:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root:~# </span><span class="nb">cd</span><span class="w"> </span>/opt
+</pre></div>
+</div>
+</li>
+<li><p>Download the <a class="reference external" href="https://github.com/neovim/neovim/releases/">latest release</a>. For example, we’re
+using the <code class="docutils literal notranslate"><span class="pre">0.10.2</span></code> release here:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root:/opt# </span>wget<span class="w"> </span>https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Untar the package you downloaded:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root:/opt# </span>tar<span class="w"> </span>xzf<span class="w"> </span>nvim-linux64.tar.gz<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>nvim-linux64.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">D</span></code> to return to your user.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">nvim</span></code> binary to PATH:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$PATH:/opt/nvim-linux64/bin&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This repository’s <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file already has the <code class="docutils literal notranslate"><span class="pre">nvim</span></code> binary path added to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
+variable, so you can skip this step.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="configure-neovim-with-nvchad">
+<h2>Configure Neovim with NvChad<a class="headerlink" href="#configure-neovim-with-nvchad" title="Link to this heading"></a></h2>
+<p>We are using <a class="reference external" href="https://nvchad.com/">NvChad</a> to enhance our Neovim installation. NvChad offers a
+blazing fast Neovim config providing solid defaults and a beautiful UI. To install it run the
+command below:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NvChad/starter<span class="w"> </span>~/.config/nvim<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>nvim
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This repository offers a ready Neovim configuration in <code class="docutils literal notranslate"><span class="pre">.config/nvim</span></code>, so you can skip this step.
+The files in <code class="docutils literal notranslate"><span class="pre">.config/nvim</span></code> configure Neovim as a Python IDE with LSP support, and also provide a
+several other tools. For more information, check the <a class="reference external" href="https://github.com/dpoulopoulos/nvim">nvim configuration</a>
+repository.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stow.html" class="btn btn-neutral float-left" title="GNU Stow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="starship.html" class="btn btn-neutral float-right" title="Starship Shell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dimitris Poulopoulos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
