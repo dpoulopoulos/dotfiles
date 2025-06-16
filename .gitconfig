@@ -18,8 +18,8 @@
   confictstyle = diff3
 [alias]
   stall = stash --all
-[includeIf "gitdir:~/git/mozilla.ai/"]
-  path = ~/git/mozilla.ai/.gitconfig
+[includeIf "gitdir:~/git/mzai/"]
+  path = ~/git/mzai/.gitconfig
 [rebase]
   updateRefs = true
 [diff]
