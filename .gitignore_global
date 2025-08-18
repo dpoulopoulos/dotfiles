@@ -1,5 +1,10 @@
 # VS Code related config files
 .vscode
+!.vscode/launch.json
 
 # Build directories
 **/build/*
+
+# AI Assistant files
+CLAUDE.md
+GEMINI.md
