@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golang &mdash; Dotfiles 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=6dbb43f8"></script>
+      <script src="https://kit.fontawesome.com/a5cfa99c7d.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Copilot in the CLI" href="copilot.html" />
+    <link rel="prev" title="uv" href="uv.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dotfiles
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dotfiles.html"><i class="fa-solid fa-gear fa-spin"></i> Dotfiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stow.html"><i class="fa-solid fa-arrow-right"></i> GNU Stow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neovim.html"><i class="fa-solid fa-pencil"></i> Neovim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="starship.html"><i class="fa-solid fa-terminal"></i> Starship Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uv.html"><i class="fa-brands fa-python"></i> uv</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><i class="fa-brands fa-golang fa-lg"></i> Golang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-go">Install Go</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verify">Verify</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="copilot.html"><i class="fa-brands fa-github"></i> Copilot in the CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html"><i class="fa-solid fa-window-maximize"></i> tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kubectl.html"><i class="fa-solid fa-dharmachakra"></i> kubectl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dotfiles</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><i class="fa-brands fa-golang fa-lg"></i> Golang</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/go.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="golang">
+<h1><i class="fa-brands fa-golang fa-lg"></i> Golang<a class="headerlink" href="#golang" title="Link to this heading"></a></h1>
+<p>Go, also known as Golang, is an open-source programming language developed by Google. It is designed
+for simplicity, efficiency, and reliability, making it ideal for building scalable and
+high-performance applications. Go’s syntax is clean and easy to read, and it comes with a powerful
+standard library. Key features of Go include strong concurrency support, garbage collection, and a
+robust type system.</p>
+<p>Go is widely used in cloud services, distributed systems, and other performance-critical
+applications. Its growing ecosystem and active community make it a popular choice for modern
+software development.</p>
+<section id="install-go">
+<h2>Install Go<a class="headerlink" href="#install-go" title="Link to this heading"></a></h2>
+<p>To install Go on your system, follow the instructions below:</p>
+<ol class="arabic">
+<li><p>Download the latest version of Go from the <a class="reference external" href="https://go.dev/doc/install">official website</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user:~$<span class="w"> </span>wget<span class="w"> </span>https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Untar and install Go under <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user:~$<span class="w"> </span>sudo<span class="w"> </span>tar<span class="w"> </span>-C<span class="w"> </span>/usr/local<span class="w"> </span>-xzf<span class="w"> </span>go1.23.2.linux-amd64.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">/usr/local/go/bin</span></code> to the PATH environment variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=$PATH:/usr/local/go/bin&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+user:~$<span class="w"> </span>.<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in this repository automates this step for you, so you can skip it.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="verify">
+<h2>Verify<a class="headerlink" href="#verify" title="Link to this heading"></a></h2>
+<p>Verify the installation by checking the Go version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user:~$<span class="w"> </span>go<span class="w"> </span>version
+go<span class="w"> </span>version<span class="w"> </span>go1.23.2<span class="w"> </span>linux/amd64
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="uv.html" class="btn btn-neutral float-left" title="uv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="copilot.html" class="btn btn-neutral float-right" title="Copilot in the CLI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dimitris Poulopoulos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
