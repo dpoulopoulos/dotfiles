@@ -6,5 +6,6 @@
 **/build/*
 
 # AI Assistant files
+.claude/*
 CLAUDE.md
 GEMINI.md
