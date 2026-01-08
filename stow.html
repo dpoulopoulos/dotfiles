@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNU Stow &mdash; Dotfiles 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=6dbb43f8"></script>
+      <script src="https://kit.fontawesome.com/a5cfa99c7d.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Neovim" href="neovim.html" />
+    <link rel="prev" title="Dotfiles" href="dotfiles.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dotfiles
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dotfiles.html"><i class="fa-solid fa-gear fa-spin"></i> Dotfiles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><i class="fa-solid fa-arrow-right"></i> GNU Stow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ignore-files-and-directories">Ignore Files and Directories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="neovim.html"><i class="fa-solid fa-pencil"></i> Neovim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="starship.html"><i class="fa-solid fa-terminal"></i> Starship Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uv.html"><i class="fa-brands fa-python"></i> uv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="go.html"><i class="fa-brands fa-golang fa-lg"></i> Golang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copilot.html"><i class="fa-brands fa-github"></i> Copilot in the CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html"><i class="fa-solid fa-window-maximize"></i> tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kubectl.html"><i class="fa-solid fa-dharmachakra"></i> kubectl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dotfiles</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><i class="fa-solid fa-arrow-right"></i> GNU Stow</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stow.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gnu-stow">
+<h1><i class="fa-solid fa-arrow-right"></i> GNU Stow<a class="headerlink" href="#gnu-stow" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://www.gnu.org/software/stow/">GNU Stow</a> is a symlink farm manager which takes distinct
+packages of software and/or data located in separate directories on the filesystem, and makes them
+appear to be installed in the same place. Its the centerpiece of the dotfiles repository, the key
+component that makes everything work.</p>
+<section id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading"></a></h2>
+<p>To install Stow on a Debian-based system run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root:~$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>stow
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>You can use Stow to create a symlink of a file to a target directory like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span>stow<span class="w"> </span>-t<span class="w"> </span>~<span class="w"> </span>file
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-t</span></code> flag specifies the target directory (in this case the home directory) and <code class="docutils literal notranslate"><span class="pre">file</span></code> specifies
+the file you want to mirror via a symlink.</p>
+<p>Finally, you can stow all the files in a directory, like the ones in this repository, by simply
+running:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user:~$ </span>stow<span class="w"> </span>.
+</pre></div>
+</div>
+<p>This command will establish symbolic links for all files in the current directory within the parent
+directory, maintaining the original directory’s structure.</p>
+</section>
+<section id="ignore-files-and-directories">
+<h2>Ignore Files and Directories<a class="headerlink" href="#ignore-files-and-directories" title="Link to this heading"></a></h2>
+<p>Using <code class="docutils literal notranslate"><span class="pre">stow</span></code> for bulk symlink creation presents a challenge: What about the files that you don’t
+want to <code class="docutils literal notranslate"><span class="pre">stow</span></code>, like the files in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory? By default, <code class="docutils literal notranslate"><span class="pre">stow</span></code> ignores common files and
+directories, like <code class="docutils literal notranslate"><span class="pre">.git</span></code>. You can view the whole list of the files and directories <code class="docutils literal notranslate"><span class="pre">stow</span></code> ignores by
+default <a class="reference external" href="https://www.gnu.org/software/stow/manual/html_node/Types-And-Syntax-Of-Ignore-Lists.html">here</a>.</p>
+<p>If you want to add your own files or directories to this list you should create a file with the name
+<code class="docutils literal notranslate"><span class="pre">.stow-local-ignore</span></code>, which works just like a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file but for <code class="docutils literal notranslate"><span class="pre">stow</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dotfiles.html" class="btn btn-neutral float-left" title="Dotfiles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="neovim.html" class="btn btn-neutral float-right" title="Neovim" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dimitris Poulopoulos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
