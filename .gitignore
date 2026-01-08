@@ -1,0 +1,4 @@
+.config/gh/*
+.config/github-copilot
+.config/thefuck
+.config/uv
